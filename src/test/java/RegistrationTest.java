@@ -17,8 +17,6 @@ public class RegistrationTest {
     @Rule
     public final BrowserRule browserRule = new BrowserRule();
 
-   // private WebDriver driver;
-
     UserAPI userAPI = new UserAPI();
     User user = new User("avocado@gmail.com","АВОКАДО","a1v2o3c4a5d6o");
     User userIncorrectPassword = new User("avocado_password@gmail.com","АВОКАДО","12345");
@@ -35,7 +33,6 @@ public class RegistrationTest {
         registerPage.fillName(user.getName());
         registerPage.fillPassword(user.getPassword());
         registerPage.clickRegisterButton();
-        loginPage.waitForPageLoad();
         assertTrue(loginPage.isLoginButtonDisplayed());
     }
 

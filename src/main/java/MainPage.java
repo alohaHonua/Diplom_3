@@ -1,8 +1,6 @@
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MainPage {
 
@@ -66,11 +64,6 @@ public class MainPage {
     @Step("Active tab name check")
     public String getActiveTabName() {
         return driver.findElement(activeTab).getText();
-    }
-
-    @Step("Waits until elements are loaded")
-    public void waitForElementsToLoad() {
-        new WebDriverWait(driver, 5);
     }
 
 }

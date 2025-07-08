@@ -1,9 +1,6 @@
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginPage {
     private WebDriver driver;
@@ -35,12 +32,6 @@ public class LoginPage {
     @Step("Checks if Login page displayed")
     public Boolean isLoginButtonDisplayed() {
         return driver.findElement(loginButton).isDisplayed();
-    }
-
-    @Step("Waits until page is loaded")
-    public void waitForPageLoad() {
-        new WebDriverWait(driver, 5)
-                .until(ExpectedConditions.visibilityOfElementLocated(loginButton));
     }
 
     @Step("Fill user email to field Email on Login page")

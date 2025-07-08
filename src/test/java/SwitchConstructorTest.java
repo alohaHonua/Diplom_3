@@ -15,7 +15,6 @@ public class SwitchConstructorTest {
         MainPage mainPage = new MainPage(browserRule.getWebDriver());
         mainPage.clickSauceButton();
         mainPage.clickBunsButton();
-        mainPage.waitForElementsToLoad();
         assertEquals("Булки",mainPage.getActiveTabName());
     }
 
@@ -24,7 +23,6 @@ public class SwitchConstructorTest {
     public void switchToSauceTest() {
         MainPage mainPage = new MainPage(browserRule.getWebDriver());
         mainPage.clickSauceButton();
-        mainPage.waitForElementsToLoad();
         assertEquals("Соусы",mainPage.getActiveTabName());
     }
 
@@ -33,7 +31,6 @@ public class SwitchConstructorTest {
     public void switchToFillingsTest() {
         MainPage mainPage = new MainPage(browserRule.getWebDriver());
         mainPage.clickFillingButton();
-        mainPage.waitForElementsToLoad();
         assertEquals("Начинки",mainPage.getActiveTabName());
     }
 

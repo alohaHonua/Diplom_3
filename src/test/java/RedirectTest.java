@@ -27,13 +27,10 @@ public class RedirectTest {
         LoginPage loginPage = new LoginPage(browserRule.getWebDriver());
         PersonalAccountPage personalAccountPage = new PersonalAccountPage(browserRule.getWebDriver());
         mainPage.clickLoginButton();
-        loginPage.waitForPageLoad();
         loginPage.fillEmail(user.getEmail());
         loginPage.fillPassword(user.getPassword());
         loginPage.clickLoginButton();
-        personalAccountPage.waitForPageLoad();
         personalAccountPage.clickPersonalAccountButton();
-        personalAccountPage.waitForProfileLoad();
         assertTrue(personalAccountPage.checkProfileButton());
     }
 
@@ -44,14 +41,11 @@ public class RedirectTest {
         LoginPage loginPage = new LoginPage(browserRule.getWebDriver());
         PersonalAccountPage personalAccountPage = new PersonalAccountPage(browserRule.getWebDriver());
         mainPage.clickLoginButton();
-        loginPage.waitForPageLoad();
         loginPage.fillEmail(user.getEmail());
         loginPage.fillPassword(user.getPassword());
         loginPage.clickLoginButton();
         personalAccountPage.clickPersonalAccountButton();
-        personalAccountPage.waitForProfileLoad();
         mainPage.clickConstructorButton();
-        personalAccountPage.waitForPageLoad();
         assertTrue(personalAccountPage.checkOrderButton());
     }
 
@@ -62,14 +56,11 @@ public class RedirectTest {
         LoginPage loginPage = new LoginPage(browserRule.getWebDriver());
         PersonalAccountPage personalAccountPage = new PersonalAccountPage(browserRule.getWebDriver());
         mainPage.clickLoginButton();
-        loginPage.waitForPageLoad();
         loginPage.fillEmail(user.getEmail());
         loginPage.fillPassword(user.getPassword());
         loginPage.clickLoginButton();
         personalAccountPage.clickPersonalAccountButton();
-        personalAccountPage.waitForProfileLoad();
         mainPage.clickLogoButton();
-        personalAccountPage.waitForPageLoad();
         assertTrue(personalAccountPage.checkOrderButton());
     }
 

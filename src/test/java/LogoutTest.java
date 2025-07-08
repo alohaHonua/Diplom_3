@@ -27,15 +27,11 @@ public class LogoutTest {
         LoginPage loginPage = new LoginPage(browserRule.getWebDriver());
         PersonalAccountPage personalAccountPage = new PersonalAccountPage(browserRule.getWebDriver());
         mainPage.clickLoginButton();
-        loginPage.waitForPageLoad();
         loginPage.fillEmail(user.getEmail());
         loginPage.fillPassword(user.getPassword());
         loginPage.clickLoginButton();
-        personalAccountPage.waitForPageLoad();
         personalAccountPage.clickPersonalAccountButton();
-        personalAccountPage.waitForLogoutButtonLoad();
         personalAccountPage.clickLogoutButton();
-        loginPage.waitForPageLoad();
         assertTrue(loginPage.isLoginButtonDisplayed());
     }
 
