@@ -10,6 +10,7 @@ public class BrowserRule extends ExternalResource {
 
     protected void before() {
         ChromeOptions options = new ChromeOptions();
+        options.addArguments("--start-maximized");
         driver = new ChromeDriver(options);
         driver.get(URL);
     }
